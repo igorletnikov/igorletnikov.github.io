@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How shorts-factory accesses, stores, and uses YouTube data.">
+  <title>Privacy policy | shorts-factory</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, sans-serif; line-height: 1.65; color: #172b3a; background: #f4f7fa; }
+    body { margin: 0; padding: 2rem 1rem; }
+    main { max-width: 44rem; margin: auto; padding: clamp(1rem, 4vw, 2.5rem); background: #fff; border: 1px solid #ccd6df; border-radius: .75rem; }
+    h1 { line-height: 1.2; font-size: clamp(1.8rem, 5vw, 2.5rem); }
+    h2 { font-size: 1.25rem; margin-top: 1.75rem; line-height: 1.3; }
+    a { color: #075a9c; text-underline-offset: .2em; }
+    a:focus-visible { outline: 3px solid #075a9c; outline-offset: 4px; }
+    code { overflow-wrap: anywhere; }
+    li + li { margin-top: .5rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <nav aria-label="Site links"><a href="index.html">Home</a></nav>
+    <h1>Privacy policy</h1>
+    <p>Effective date: <time datetime="2026-11-04">2026-11-04</time></p>
+    <p>shorts-factory is a private tool. Its owner uses it only for the owner's own YouTube channels: <a href="https://www.youtube.com/@threemindslab">@threemindslab</a>, <a href="https://www.youtube.com/@whyitbrokehistory">@whyitbrokehistory</a> and <a href="https://www.youtube.com/@whybuiltlikethat">@whybuiltlikethat</a>. Contact: CONTACT_EMAIL.</p>
+
+    <h2>YouTube access and use</h2>
+    <p>The app uses YouTube API Services. By using it, you agree to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Google's handling of data is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+    <p>The app requests these OAuth scopes:</p>
+    <ul>
+      <li><code>https://www.googleapis.com/auth/youtube.upload</code> — upload approved videos to the owner's channels.</li>
+      <li><code>https://www.googleapis.com/auth/youtube.readonly</code> — read YouTube data, including public video research.</li>
+      <li><code>https://www.googleapis.com/auth/yt-analytics.readonly</code> — read the owner's channel analytics.</li>
+      <li><code>https://www.googleapis.com/auth/youtube.force-ssl</code> — update uploaded videos' publication status and schedule, set their thumbnails, manage the owner's playlists and channel branding, post one question comment on the owner's own videos, and read comments on those videos.</li>
+    </ul>
+    <p>Uploads send video files, titles, descriptions, source links, tags, category, privacy and publication settings, and made-for-kids and synthetic-media declarations to YouTube. The app stores returned video IDs and publication records. Analytics reads views, average view percentage, average view duration, likes and comments counts, and subscribers gained for the owner's videos published in the last 30 days; it does not retrieve individual viewers' identities from analytics.</p>
+    <p>The app reads comment text and like counts on the owner's own videos, excluding the channel's own comments, to learn which topics and questions interest viewers.</p>
+    <p>Public research reads video IDs, titles, descriptions, channel names and IDs, view counts, subscriber counts, and thumbnail URLs and images to identify format and style patterns.</p>
+
+    <h2>Storage and retention</h2>
+    <p>The app's SQLite database (<code>core/data/factory.db</code>) and OAuth credentials (<code>core/config/tokens.json</code>) are stored on the owner's PC, not on this website. The database contains video and publication records, dated analytics snapshots, and recent comment text. Older comment text is deleted when the app's tracker runs. Other records and tokens remain until the owner manually deletes them; the current code has no automatic deletion after revocation. The 30-day analytics query window does not delete older snapshots.</p>
+    <p>Public research data is processed during each scout run. Downloaded thumbnails are removed when that processing ends, including on processing errors. Format and style notes and run history remain locally in <code>channels/channel1/templates/scout.md</code> and <code>core/data/journal/scout_history.jsonl</code> until manually deleted.</p>
+
+    <h2>Data disclosure</h2>
+    <p>The operator does not sell data or share it for advertising. Operation sends uploads and API requests to Google/YouTube. Research sends selected public video metadata and thumbnails to Anthropic's Claude through Claude Code for analysis, and links to public videos to Google Gemini. Script generation and learning send selected own-channel titles, performance metrics and recent comment text to Claude. Local storage therefore does not mean all processing stays on the PC; this policy does not promise a retention period for those providers' copies.</p>
+    <p>This static website has no scripts, cookies, forms, or analytics added by the app.</p>
+
+    <h2>Revocation and deletion</h2>
+    <p>You can revoke the app's Google access at any time through <a href="https://security.google.com/settings/security/permissions">Google Account permissions</a>. Revocation prevents further authorized access but does not erase existing local records or videos already uploaded to YouTube. Stop the app and manually remove its saved tokens and related local data, or contact CONTACT_EMAIL for deletion assistance. Uploaded videos can be managed separately in YouTube Studio.</p>
+  </main>
+</body>
+</html>
