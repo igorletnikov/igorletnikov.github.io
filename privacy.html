@@ -21,8 +21,8 @@
   <main>
     <nav aria-label="Site links"><a href="index.html">Home</a></nav>
     <h1>Privacy policy</h1>
-    <p>Effective date: <time datetime="2026-11-04">2026-11-04</time></p>
-    <p>shorts-factory is a private tool. Its owner uses it only for the owner's own YouTube channels: <a href="https://www.youtube.com/@threemindslab">@threemindslab</a>, <a href="https://www.youtube.com/@whyitbrokehistory">@whyitbrokehistory</a> and <a href="https://www.youtube.com/@whybuiltlikethat">@whybuiltlikethat</a>. Contact: letnikov46@gmail.com.</p>
+    <p>Effective date: <time datetime="2026-11-06">2026-11-06</time></p>
+    <p>shorts-factory is a private tool. Its owner uses it only for the owner's own YouTube channels: <a href="https://www.youtube.com/@whyitbrokehistory">@whyitbrokehistory</a> and <a href="https://www.youtube.com/@whybuiltlikethat">@whybuiltlikethat</a>. Videos uploaded earlier to @threemindslab stay on YouTube; since 2026-11-06 the app no longer uploads to that channel or reads its data. Contact: letnikov46@gmail.com.</p>
 
     <h2>YouTube access and use</h2>
     <p>The app uses YouTube API Services. By using it, you agree to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Google's handling of data is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
@@ -39,7 +39,7 @@
 
     <h2>Storage and retention</h2>
     <p>The app's SQLite database (<code>core/data/factory.db</code>) and OAuth credentials (<code>core/config/tokens.json</code>) are stored on the owner's PC, not on this website. The database contains video and publication records, dated analytics snapshots, and recent comment text. Older comment text is deleted when the app's tracker runs. Other records and tokens remain until the owner manually deletes them; the current code has no automatic deletion after revocation. The 30-day analytics query window does not delete older snapshots.</p>
-    <p>Public research data is processed during each scout run. Downloaded thumbnails are removed when that processing ends, including on processing errors. Format and style notes and run history remain locally in <code>channels/channel1/templates/scout.md</code> and <code>core/data/journal/scout_history.jsonl</code> until manually deleted.</p>
+    <p>Public research data is processed during each scout run. Downloaded thumbnails are removed when that processing ends, including on processing errors. Format and style notes and run history remain locally in <code>channels/&lt;channel&gt;/templates/scout.md</code> and <code>core/data/journal/scout_history.jsonl</code> until manually deleted.</p>
 
     <h2>Data disclosure</h2>
     <p>The operator does not sell data or share it for advertising. Operation sends uploads and API requests to Google/YouTube. Research sends selected public video metadata and thumbnails to Anthropic's Claude through Claude Code for analysis, and links to public videos to Google Gemini. Script generation and learning send selected own-channel titles, performance metrics and recent comment text to Claude. Local storage therefore does not mean all processing stays on the PC; this policy does not promise a retention period for those providers' copies.</p>
